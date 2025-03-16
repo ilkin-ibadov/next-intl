@@ -1,8 +1,8 @@
 import './global.css'
 
 import { dir } from 'i18next'
-import { languages, fallbackLng } from '../i18n/settings'
-import { useTranslation } from '../i18n'
+import { languages, fallbackLng } from 'lib/i18n/settings'
+import { useTranslation } from 'lib/i18n'
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }))

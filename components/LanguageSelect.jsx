@@ -1,7 +1,7 @@
 "use client"
 
 import { redirect } from "next/navigation"
-import { languages } from "../../../i18n/settings"
+import { languages } from "lib/i18n/settings"
 import { usePathname } from 'next/navigation';
 
 const LanguageSelect = () => {

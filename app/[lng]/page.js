@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { languages, fallbackLng } from '../i18n/settings'
-import { useTranslation } from '../i18n'
-import LanguageSelect from './_components/common/LanguageSelect'
+import { languages, fallbackLng } from 'lib/i18n/settings'
+import { useTranslation } from 'lib/i18n'
+import LanguageSelect from 'components/LanguageSelect'
 
 export default async function Page({ params }) {
   let { lng } = await params

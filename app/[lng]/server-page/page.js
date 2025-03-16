@@ -1,21 +1,19 @@
 import Link from 'next/link'
-import { useTranslation } from '../../i18n'
-import LanguageSelect from '../_components/common/LanguageSelect'
+import { useTranslation } from 'lib/i18n'
+import LanguageSelect from 'components/LanguageSelect'
 
 export default async function Page({ params }) {
   const { lng } = await params
-  const { t } = await useTranslation(lng, 'second-page')
-  
+  const { t } = await useTranslation(lng, 'server-page')
+
   return (
-    <>
-      <main>
+    <main>
       <LanguageSelect />
-        <Link href={`/${lng}`}>
-          <button type="button">
-            {t('back-to-home')}
-          </button>
-        </Link>
-      </main>
-    </>
+      <Link href={`/${lng}`}>
+        <button type="button">
+          {t('back-to-home')}
+        </button>
+      </Link>
+    </main>
   )
 }
