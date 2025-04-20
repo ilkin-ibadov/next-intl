@@ -11,10 +11,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   let { lng } = await params
   if (languages.indexOf(lng) < 0) lng = fallbackLng
-  const { t } = await useTranslation(lng)
+  const { t } = await useTranslation(lng, "client-page")
   return {
     title: t('title'),
-    content: 'A playground to explore new Next.js 13/14 app directory features such as nested layouts, instant loading states, streaming, and component level data fetching.'
+    description: 'A playground to explore new Next.js 13/14 app directory features such as nested layouts, instant loading states, streaming, and component level data fetching.'
   }
 }
 
